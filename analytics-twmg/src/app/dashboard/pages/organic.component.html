@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-header">SEO Organic Visits<span><i class="fa fa-bar-chart fa-lg"></i></span></div>
+  <div class="card-block">
+    <nvd3 #nvd3 [options]="bar_graph" [data]="this?.organic" api="api"></nvd3>
+  </div>
+
+  <div class="card-footer">
+    <inline-editor type="textarea" empty="Comment" [(ngModel)]="dataset.comments.organic" name="editableTextArea"></inline-editor>
+  </div>
+</div>

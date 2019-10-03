@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-header">Traffic Comparision<span><i class="fa fa-mobile fa-lg"></i></span> </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-6">
+                <nvd3 #nvd3 [options]="pie_chart" [data]="dataset.current?.traffic" api="api"></nvd3>
+                <p class= "text-months" align="center"> Traffic of {{current_month}}     {{this.first_year}}</p>
+            </div>
+            <div class="col-md-6">
+                 <nvd3 [options]="pie_chart" [data]="dataset.getComparedData('traffic')" api="api"></nvd3>
+                 <p class="text-months" align="center">Traffic of {{compare_index_month}}      {{this.second_year}}</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <inline-editor type="textarea" empty="Comment" [(ngModel)]="dataset.comments.traffic" name="editableTextArea"></inline-editor>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="row main_card">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">Social Media<span><i class="fa fa-users fa-lg"></i></span></div>
+          <div class="card-block">
+            <div class="row social">
+              <div class="offset-md-1 col-md-2 text-center">
+                  <div>
+                     <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle-thin fa-stack-2x"></i>
+                      <i class="fa fa-facebook"></i>
+                    </span>
+                    <h4>{{dataset.current?.social|ArrayPipe: "Facebook"}}
+                    <span class="fa {{this.symbol?.Facebook}}"></span>{{this.percentage?.Facebook}}</h4>
+                  </div>
+              </div>
+              <div class="col-md-2 text-center">
+                  <div>
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle-thin fa-stack-2x"></i>
+                      <i class="fa fa-instagram"></i>
+                    </span>
+                    <h4>{{dataset.current?.social|ArrayPipe: "Instagram"}}
+                    <span class="fa {{this.symbol?.Instagram}}"></span>{{this.percentage?.Instagram}}</h4>
+                  </div>
+              </div>
+              <div class="col-md-2 text-center">
+                <div>
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle-thin fa-4x fa-stack-2x"></i>
+                    <i class="fa fa-linkedin"></i>
+                  </span>
+                   <h4>{{dataset.current?.social|ArrayPipe: "LinkedIn"}}
+                    <span class="fa {{this.symbol?.LinkedIn}}"></span>{{this.percentage?.LinkedIn}}</h4>
+                </div>
+              </div>
+              <div class="col-md-2 text-center">
+                <div>
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-twitter"></i>
+                  </span>
+                  <h4>{{dataset.current?.social|ArrayPipe: "Twitter"}}
+                    <span class="fa {{this.symbol?.Twitter}}"></span>{{this.percentage?.Twitter}}</h4>
+                </div>
+              </div>
+              <div class="col-md-2 text-center">
+                  <div>
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-comments-o fa-2x"></i>
+                    </span>
+                    <h4>{{dataset.current?.social|ArrayPipe: "Other"}}
+                    <span class="fa {{this.symbol?.Other}}"></span>{{this.percentage?.Other}}</h4>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <inline-editor type="textarea" [(ngModel)]="dataset.comments.social" empty="Comment" name="editableTextArea"></inline-editor>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,91 @@
+<div class="card">
+    <div class="card-header">Site Goals<span><i class="fa fa-futbol-o fa-lg"></i></span></div>
+      <div class="card-block">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Time Duration</th>
+              <th>
+                <span>Please select Goals :</span>
+                <span class="select_join">
+                 <select #eventValue (change)="goalDetailsViaChannel(eventValue.value)" class="form-control" id="styled-select">
+               <option *ngFor="let goalNames of goalList let sum=i" value="{{goalNames.id}}">{{goalNames.name}}</option>
+               </select>
+                </span>
+             </th>
+              <th>Change%</th>
+              <th>Goal Conversion Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+              <td>{{current_month}}</td>
+              <!--<td>{{data.current?.goalCompletion}}</td>-->
+               <td>{{totalForSiteGoal.current}}</td>
+              <td rowspan=2 style="vertical-align:middle">
+                <i class="fa {{helper.getSymbol(totalForSiteGoal.current,totalForSiteGoal.compare)}}"></i>
+                {{helper.getPositivePercentage(totalForSiteGoal.current,totalForSiteGoal.compare)}}
+              </td>
+              <td rowspan=2>
+                <i class="fa {{helper.getSymbol(helper.getPositivePercentage(totalForSiteGoal.compare,data.compare?.sessions),helper.getPositivePercentage(totalForSiteGoal.current,data.current?.sessions))}}"></i>
+                {{helper.calculateGoalConversionRate(totalForSiteGoal.current,totalForSiteGoal.compare,data.current?.sessions,data.compare?.sessions)}}
+              </td>
+            </tr>
+            <tr>
+              <td>{{compare_month}}</td>
+              <td>{{totalForSiteGoal.compare}}</td>
+              <!--{{this.eventIndex.compareEventGoalNumber}}-->
+              <!--<td>{{compare?.goalCompletion}}</td>-->
+            </tr>
+          </tbody>
+        </table>
+        <div class="card inner-card">
+            <div class="card-header">
+              Site Goal Via Channel
+              <span><i class="fa fa-bar-chart fa-lg"></i></span>
+            </div>
+            <div class="card-block">
+              <table class="table table-striped table-bordered">
+               <thead>
+                 <tr>
+                   <th>Default Channel Grouping</th>
+                   <th>New Visitors</th>
+                   <th>Returning Visitors</th>
+                   <th>  <span>Total Goal Completion</span>
+                   </th>
+    
+    
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr *ngFor="let current of retrievedData?.current;let i=index">
+                   <td>{{current.userType}}</td>
+                  <!--<td>{{this.eventIndex[0].channelName}}</td>-->
+                   <td>
+                      {{current.newVisits}}
+                      <!--<i class="fa {{helper.getSymbol(current.newVisits,retrievedData?.compare[i].newVisits)}}"></i>-->
+                      <!--{{helper.getPositivePercentage(current.newVisits,retrievedData?.compare[i].newVisits)}}-->
+                    </td>
+                   <td>
+                      {{current.returnVisits}}
+                      <!--<i class="fa {{helper.getSymbol(current.returnVisits,retrievedData?.compare[i].returnVisits)}}"></i>-->
+                      <!--{{helper.getPositivePercentage(current.returnVisits,retrievedData?.compare[i].returnVisits)}}-->
+                   </td>
+                   <td>
+                       {{current.total}}
+    
+                       <!--<i class="fa {{helper.getSymbol(current.newVisits+current.returnVisits,current.newVisits,retrievedData?.compare[i].newVisits+retrievedData?.compare[i].returnVisits)}}"></i>-->
+                        <!--{{helper.getPositivePercentage(current.newVisits+current.returnVisits,current.newVisits,retrievedData?.compare[i].newVisits+retrievedData?.compare[i].returnVisits)}}-->
+                    </td>
+                 </tr>
+               </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+      <div class="card-footer">
+        <div class="uparrow">
+         <span class="tip-up"></span></div>
+        <inline-editor type="text" [(ngModel)]="dataset.comments.sitegoals" empty="Comment" name="editableTextArea"></inline-editor>
+      </div>
+    </div>

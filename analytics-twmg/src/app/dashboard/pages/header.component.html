@@ -1,0 +1,50 @@
+ <div class="row">
+  <div class="col-md-12" align="right">
+      <button class="sign_in {{sign_in}}" (click)="authenticateUser()">Sign In</button>
+
+  </div>
+</div>
+<div class="row {{body}}">
+  <div class="col-md-3">
+    <h2>Google Analytic</h2>
+    <label>Account</label>
+     <select [(ngModel)]="AccountValue" class="form-control" #company (change)="getDetails(company.value)">
+         <option *ngFor="let company of companies; let i=index;" value="{{i}}">{{company.name}}</option>
+     </select>
+     <label>Property</label>
+     <select [(ngModel)]="PropertyValue" class="form-control" (change)="getView()">
+         <option *ngFor="let property of companies_properties;" value="{{property.id}}">{{property.name}}</option>
+     </select>
+     <label>Value</label>
+     <select [(ngModel)]="ViewValue" class="form-control">
+         <option *ngFor="let views of companies_views;" value="{{views.id}}">{{views.name}}</option>
+     </select>
+   </div>
+  <div class="col-md-3 side-border">
+      <h2>Web Ceo Ranking Account</h2>
+      <select [(ngModel)]="rankingAccount" class="form-control">
+           <option *ngFor="let webceo of web_ceo_list" value="{{webceo.project}}">{{webceo.domain}}</option>
+       </select>
+       <h2>Packages</h2>
+       <select [(ngModel)]="package" class="form-control">
+         <option *ngFor="let package of packages">{{package}}</option>
+       </select>
+  </div>
+  <div class="col-md-3 side-border">
+    <h2>Current Date Range</h2>
+    <label>Start Date</label>
+    <owl-date-time dateFormat="YYYY-MM-DD" dataType="string" [(ngModel)]="first_month_start"></owl-date-time>
+    <label>End Date</label>
+    <owl-date-time dateFormat="YYYY-MM-DD" dataType="string" [(ngModel)]="first_month_end"></owl-date-time>
+  </div>
+  <div class="col-md-3 side-border">
+    <h2>Compare Date Range</h2>
+    <label>Start Date</label>
+    <owl-date-time dateFormat="YYYY-MM-DD" dataType="string" [(ngModel)]="second_month_start"></owl-date-time>
+    <label>End Date</label>
+    <owl-date-time dateFormat="YYYY-MM-DD" dataType="string" [(ngModel)]="second_month_end"></owl-date-time>
+    <hr/>
+    <button (click)="loadAnalytics()" class="btn btn-primary">Load Data</button>
+    <button (click)="saveProject()" class="btn btn-primary">Save Data</button>
+  </div>
+</div>
