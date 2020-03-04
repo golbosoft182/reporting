@@ -1,0 +1,147 @@
+section{
+    background-color: #115E8A;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+.main_card{
+    padding:2% 0;
+}
+.login_bar{
+    background-color: #0F3B5F;
+    color: white;
+    text-align:left;
+}
+.show{
+    margin:2%;
+}
+.side-border{
+    padding:2%;
+    border-right:2px solid #fff;
+}
+.load_btn{
+    margin:2% 0;
+    width:100%;
+    color:#202f56;
+    background-color:#fff;
+}
+.grid_table{
+    table-layout: fixed;
+    width: 55%;
+    text-align: center;
+}
+.social{
+    margin-top:5%;
+}
+.social .fa,.social h4{
+    color:#fff;
+}
+.social .col-md-2:first-child div{
+    background:#3b5998;
+}
+.social .col-md-2:nth-child(2) div{
+    background:#cd486b;
+}
+.social .col-md-2:nth-child(3) div{
+    background:#216f94;
+}
+.social .col-md-2:nth-child(4) div{
+    background:#00aced;
+}
+.social .col-md-2:nth-child(5) div{
+    background:#36465d;
+}
+/*.arrow{*/
+/*    color:#FFA500;*/
+/*}*/
+.fa-arrow-up{
+    color: #21722E;
+}
+.fa-arrow-down{
+    color: #DD1A00;
+}
+.bounce_rate .fa-arrow-up{
+    color: #DD1A00;
+}
+.bounce_rate .fa-arrow-down{
+     color: #21722E;
+}
+.text-months{
+    font-weight: bold;
+}
+.sign_in{
+    height: 50px;
+    width: 150px;
+}
+#styled-select{
+     font-size:10pt;
+     color: #eaf1f7;
+     background-color:#504431;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     width: 200px;
+}
+.dropdown-item{
+ color: #eaf1f7;
+}
+#styled-select:hover{
+    font-size:10pt;
+    opacity: 1;
+	visibility: visible;
+	background: #2d210d;
+	color:white;
+	width: 200px;
+}
+.select_join select {
+   width: 200px;
+   font-size:10pt;
+   border-radius: 2;
+}
+.select_join select:focus {
+    outline: none;
+}
+.card-footer{
+    color: black;
+}
+.nvd3{
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    animation-timing-function: ease-in;
+}
+body{
+    font-size: 11pt;
+}
+tbody table{
+    width:100%;
+}
+.card-header span{
+    float:right;
+}
+.card-header:after{
+    clearfix:both;
+}
+.card-footer {
+    margin-top: 22px;
+    position: relative;
+    background: #DADADA;
+    border-radius: 5px;
+}
+
+.card{
+    background-color: transparent;
+    border:none;
+}
+.card-block {
+    background: #fff;
+}
+
+/*Width*/
+.w-90{
+  width:90%;
+}
+.w-10{
+  width:10%;
+}
+

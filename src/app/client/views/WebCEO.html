@@ -1,0 +1,168 @@
+<div class="row main_card">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <span class="help">
+          <i class="fa fa-question-circle"></i>
+          <span class="help_text">Top 5 Keywords Moved Up.</span>
+        </span>
+        Top 5 Moved Up Keywords
+        <span class="head_icon"><i class="fa fa-trophy fa-lg"></i></span>
+        <div class="clearfix"></div>
+      </div>
+      <div class="card-block">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="scroll">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>Keyword</th>
+                  <th>Mobile/Desktop</th>
+                  <th>
+                    <table>
+                      <tr>
+                        <td>Position</td>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let row of webData?.top_keyword">
+                  <td>{{row.key}}</td>
+                  <td>
+                    <i class="fa {{row.flag}}"></i>
+                    {{row.source|titlecase}} - {{getCountryName(row.location)|titlecase}}
+                  </td>
+                  <td>
+                    <table>
+                      <tr>
+                        <td>
+                          <i class="fa fa-leaf"></i>
+                          {{row.organic_data}}
+                          <i class="fa {{row.difference}}"></i>
+                          <span *ngIf="row.difference_value!=0">{{row.difference_value}}</span>
+                        </td>
+                        <td *ngIf="row.hasOwnProperty('pages')">{{row.pages}}</td>
+                      </tr>
+                    </table>
+
+                    <table *ngIf="row.hasOwnProperty('place')">
+                      <tr>
+                        <td><i class="fa fa-map-marker"></i></td>
+                        <td class="grid_table">
+                          {{row.place_current}}
+                          <i class="fa {{row.place_difference}}"></i>
+                          {{row.place_difference_value}}
+                        </td>
+
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--<tableview [data]="{header:[],body:[]}"></tableview>-->
+
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        {{comment.topkeyword}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row main_card">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+                  <span class="help">
+                    <i class="fa fa-question-circle"></i>
+                    <span class="help_text">This table shows the Organic Keywords Ranking Position in Google Search Results for both Mobile and Desktop.</span>
+                  </span>
+        Google Organic Keywords Ranking Positions
+        <span class="head_icon"><i class="fa fa-graduation-cap fa-lg"></i></span>
+        <div class="clearfix"></div>
+      </div>
+      <div class="card-block">
+        <div class="row ">
+          <div class="col-md-12">
+            <div class="scroll">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>Keyword</th>
+                  <th>
+                    Desktop Position
+                    <table>
+                      <tr>
+                        <td class="w-75">Position</td>
+                        <td class="w-25">Page</td>
+                      </tr>
+                    </table>
+                  </th>
+                  <th>
+                    Mobile Position
+                    <table>
+                      <tr>
+                        <td class="w-75">Position</td>
+                        <td class="w-25">Page</td>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let row of webData?.keyword">
+                  <td>{{row.key}}</td>
+                  <td>
+                    <table>
+                      <tr>
+                        <td class="grid_table w-75">
+                          <i class="fa fa-leaf fa-normal"></i>
+                          {{row.organic_data}}
+                          <i class="fa {{row.difference}}"></i>
+                          <span *ngIf="row.difference_value!=0">{{row.difference_value}}</span>
+                        </td>
+                        <td class="w-25">{{row.pages}}</td>
+                      </tr>
+                    </table>
+                    <table *ngIf="row.hasOwnProperty('place')">
+                      <tr>
+                        <td class="w-75">
+                          <i class="fa fa-map-marker fa-normal"></i>
+                          {{row.place_current}}
+                          <i class="fa {{row.place_difference}}"></i>
+                          {{row.place_difference_value}}
+                        </td>
+                        <td class="w-25">{{row.place_pages}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td>
+                    <table>
+                      <tr>
+                        <td class="w-75">
+                          <i class="fa fa-leaf fa-normal"></i>
+                          {{row.mobile}}
+                        </td>
+                        <td class="w-25">{{row.mobile_pages}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        {{comment.topsearch}}
+      </div>
+    </div>
+  </div>
+</div>

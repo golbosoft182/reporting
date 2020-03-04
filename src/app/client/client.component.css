@@ -1,0 +1,417 @@
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');*/
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+* {
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+}
+
+body {
+  background-color: #217B99;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h5, h6 {
+  font-weight: bold;
+}
+
+#fixedTop {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+
+/****/
+
+/*Header part*/
+.client_header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: #fff;
+  margin: auto;
+  top: 0;
+}
+
+.client_header .client_info {
+  padding: 15px 0;
+}
+
+.client_header .logo_twmg {
+  width: 50%;
+  margin-left: 15px;
+}
+
+.client_header {
+  color: #202f56;
+}
+
+.client_header h6 > span {
+  font-weight: normal;
+}
+
+.report_header {
+  padding-top: 75px;
+  padding-bottom: 10px;
+  background: #26547b;
+}
+
+.glance_table td:first-child .fa {
+  padding-right: 15px;
+}
+
+.glance_table td:first-child select {
+  display: inline-block;
+}
+
+.analytics_chart_header {
+  background-color: #dedddd;
+  width: 100%;
+  padding: .75rem 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.analytics_chart_header {
+  font-weight: bold;
+}
+
+.analytics_chart_header > div,
+.legend-color > div {
+  padding:0 5px;
+  align-items: center;
+}
+
+/*.legend-color > div{*/
+/*  padding:0 5px;*/
+/*}*/
+
+.analytics_chart_header .custom_icon,
+.legend-color .custom_icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.analytics_chart_header div > span,
+.legend-color div > span {
+  vertical-align: middle;
+}
+
+
+.nvd3 .nv-multibarHorizontal .nv-groups text {
+  /*fill:rgba(255,255,255,1)!important;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+.nv-groups .nv-group {
+  fill-opacity: 1 !important;
+}
+
+/*CLient Body*/
+/*.analytics-data {*/
+/*border-top: 300px solid  #2B5A88;*/
+/*top: -90px;*/
+/*}*/
+
+table {
+  width: 100%
+}
+
+table thead th {
+  background-color: #DDDCDC;
+}
+
+.static_background {
+  background: #26547b;
+  height: 350px;
+  width: 100%;
+  top: 0;
+}
+
+.client-data p {
+  font-weight: bold;
+  color: black;
+
+}
+
+#clientSection {
+  position: absolute;
+  /* top: -150px; */
+  margin: -150px auto;
+  width: 100%;
+  /*margin-top: 220px;*/
+  /*border-top:150px solid #235175;*/
+}
+
+.client-data span {
+  font-weight: normal;
+}
+
+#internetMarket {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 23px;
+}
+
+#toogleMonth {
+  margin-right: 0px;
+}
+
+#ataglance {
+  margin: auto;
+  width: 80%;
+}
+
+.fa-arrow-up {
+  color: #21722E;
+}
+
+.fa-arrow-down {
+  color: #DD1A00;
+}
+
+.bounce_rate .fa-arrow-up {
+  color: #DD1A00;
+}
+
+.bounce_rate .fa-arrow-down {
+  color: #21722E;
+}
+
+.social .fa, .social h4 {
+  color: #fff;
+}
+
+.fa-icon {
+  color: #18386D;
+  /*font-size: 24px;*/
+}
+
+
+/*.fa{*/
+/*    font-size: 24px;*/
+/*    }*/
+text-months {
+  font-weight: bold;
+}
+
+#styled-select {
+  font-size: 10pt;
+  color: #3C3C3C;
+  background-color: #F4F3F3;
+  /*overflow: hidden;*/
+  text-overflow: ellipsis;
+  /*width: 200px;*/
+
+}
+
+.select_join select {
+  /*width: 200px;*/
+  font-size: 10pt;
+  border-radius: 2px;
+}
+
+.select_join select:focus {
+  outline: none;
+}
+
+
+.card {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+}
+
+.card-header:first-child {
+  border-radius: 0 0 0;
+}
+
+.card, .card-header {
+  border-radius: 0px;
+  border-top: 0px;
+}
+
+.card-block {
+  background: #fff;
+  padding: 0px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 27px;
+  color: #fff;
+  margin-left: 15px;
+  margin-bottom: 0px;
+}
+
+.logo {
+  height: 80px;
+  border: 1px solid red;
+}
+
+.logo span {
+  padding: 0;
+  border: solid 1px black;
+  margin-left: 20px;
+  font-size: 36px;
+  display: inline;
+  line-height: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+  div.col-md-12.col-xl-4 {
+    width: 100%;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#social table {
+  margin-bottom: 15px;
+}
+
+#social table tr td {
+  background-color: #DEDDDD;
+}
+
+/*     .fa, .social h4 {*/
+/*    color: #ADB5BD;*/
+/*}*/
+#firstContent {
+  font-weight: bolder;
+  font-size: 24px;
+  color: #1F2E55;
+}
+
+hr {
+  width: 70%;
+  /*color:red;*/
+}
+
+.nvd3.nv-pie path {
+  stroke-opacity: 1.5;
+  fill-opacity: 1 !important;
+}
+
+.nv-groups rect {
+  stroke-opacity: 1.5;
+  fill-opacity: 1 !important;
+}
+
+.social .fa {
+  color: #ADB4BD;
+}
+
+.social .fa-arrow-up {
+  color: #21722E;
+}
+
+.social .fa-arrow-down {
+  color: #DD1A00;
+}
+
+.social {
+  margin-bottom: 5%;
+}
+
+#barStyle span {
+  position: relative;
+  top: -5px;
+
+}
+
+/*Width*/
+.w-90 {
+  width: 90%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+/*Font Size*/
+.fa-normal {
+  font-size: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .legend-color {
+    position: absolute;
+    left: 35px;
+    top: 15px;
+  }
+}
+
+@media (max-width:767px){
+
+}
+
+@media (max-width:568px){
+  body{
+    font-size:13px;
+  }
+  .card-header{
+    font-size:16px;
+  }
+  .report_header {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+  #social table tr td{
+    width:50%;
+  }
+  h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .comment p.collapse[aria-expanded="false"] {
+    display: block;
+    height: 40px !important;
+    overflow: hidden;
+  }
+
+  .comment p.collapsing[aria-expanded="false"] {
+    height: 40px !important;
+  }
+
+  .comment_btn .fa{
+    color:#2C537A;
+  }
+
+  .comment_text{
+    height:40px;
+    overflow:hidden;
+  }
+  /*#module a.collapsed:after  {*/
+  /*  content: '+ Show More';*/
+  /*}*/
+
+  /*#module a:not(.collapsed):after {*/
+  /*  content: '- Show Less';*/
+  /*}*/
+}
+
+
+/*.nv-series-0 { stroke: #576EA1 !important; fill: #576EA1 !important }*/
+/*.nv-series-1 { stroke: #3F9EBF !important; fill: #3F9EBF !important }*/
+
+/*#stylishDiv{*/
+/*    height: 100px;*/
+/*    width:100%;*/
+/*    background-color: red;*/
+/*    position: fixed;*/
+/*    z-index: 999;*/
+/*    margin-top: 30%;*/
+/*}*/

@@ -1,1 +1,198 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');*/
+body{
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  position:relative;
+}
+h1,h2,h3,h4{
+  font-family: 'Open Sans', sans-serif;
+}
+form,label,select{
+  font-family: 'Open Sans', sans-serif;
+}
+.clearfix{
+  clear:both;
+}
+.main_card{
+  margin-top:15px;
+  margin-bottom:15px;
+}
+/*.card-block{*/
+/*    min-height:350px;*/
+/*}*/
+.scroll {
+  height:556px !important;
+  overflow-y: scroll;
+}
+body{
+  background-color: #fff;
+}
+
+.bg-gray{
+  background-color:#F2F2F2;
+}
+.client-data{
+  background:#202f56;
+  /*padding:2% 0;*/
+  color:#fff;
+}
+.client-data p{
+  margin-bottom:0px;
+}
+
+/**Card**/
+.card-header{
+  background-color: #C7C7C7;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.card-footer {
+  font-weight: normal;
+  position: relative;
+  background: #DADADA;
+  margin-top:5px;
+}
+.card-footer:last-child {
+  border-radius: 0;
+}
+.card-header{
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  font-weight:bold;
+  font-size:24px;
+  color: #202f56;
+}
+.card-header .head_icon{
+  /*float:right;*/
+}
+.card-footer{
+  font-weight:bold;
+}
+.inner-card{
+  width:100%;
+}
+.table .fa{
+  /*font-size:1.5em;*/
+}
+
+  /*.table th{*/
+  /*    background-color:#202f56;*/
+  /*    color:#fff;*/
+  /*}*/
+  /*.table select{*/
+  /*    border: none;*/
+  /*    background: transparent;*/
+  /*    box-shadow: none;*/
+  /*}*/
+.table select:hover{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+.table th select{
+  color: #fff;
+}
+.table td{
+  vertical-align:middle;
+}
+.icon-red{
+  color:red;
+}
+.icon-yellow{
+  color:yellow;
+}
+.icon-grey{
+  color:grey;
+}
+.icon-green{
+  color:green;
+}
+.icon-blue{
+  color:blue;
+}
+.profile-img{
+  /*width:100%;*/
+  /*margin:5% 0;*/
+}
+.social{
+  margin-top:5%;
+}
+.social .fa,.social>h4{
+  color:#fff;
+}
+.social .col-md-2:first-child div{
+  background:#3b5998;
+}
+.social .col-md-2:nth-child(2) div{
+  background:#cd486b;
+}
+.social .col-md-2:nth-child(3) div{
+  background:#216f94;
+}
+.social .col-md-2:nth-child(4) div{
+  background:#00aced;
+}
+.social .col-md-2:nth-child(5) div{
+  background:#36465d;
+}
+.arrow{
+  color:#FFA500;
+}
+.main_wall{
+  position:relative;
+
+}
+.account-wall{
+  /*position: absolute;*/
+  /*margin-top:15%;*/
+
+}
+.form-signin input{
+  margin:5% auto;
+}
+.hide{
+  display:none;
+}
+.show{
+  display:block;
+}
+.card-block{
+  border:none;
+}
+.card{
+  background-color: transparent;
+  border:none;
+}
+.custom_flex_row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+}
+.custom_flex_row>span{
+  flex: 1 100px;
+}
+.help_text{
+  visibility:hidden;
+  position:absolute;
+  background:#26547b;
+  color:#fff;
+  /*width:450px;*/
+  z-index:9999;
+  bottom: 100%;
+  left: 50%;
+  padding:2%;
+  border-radius:7px;
+  font-size:14px;
+  font-weight:normal;
+  /*padding:2%;*/
+}
+.help{
+  position:relative;
+}
+.help:hover .help_text{
+  visibility:visible;
+}

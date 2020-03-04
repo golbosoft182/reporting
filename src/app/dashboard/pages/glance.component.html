@@ -1,0 +1,111 @@
+ <div class="row main_card">
+    <div class="col-md-12 col-xl-12">
+      <div class="card">
+        <div class="card-header">
+          At a Glance<span><i class="fa fa-binoculars fa-lg"></i></span>
+        </div>
+        <div class="card-block">
+           <table class="table table-reponsive">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>{{current_month}} {{this.first_year}}</th>
+                <th>{{compare_index_month}} {{this.second_year}}</th>
+                <th>Change(%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Visits</td>
+                <td>{{dataset.current.visits?.total_visit}}</td>
+                <td>{{dataset.getComparedData("visits")?.total_visit}}</td>
+                <td>
+                  <i class="fa {{helper.getSymbol(dataset.current.visits?.total_visit,dataset.getComparedData('visits')?.total_visit)}}"></i>
+                  {{helper.getPositivePercentage(dataset.current.visits?.total_visit,dataset.getComparedData("visits")?.total_visit)}}
+                </td>
+              </tr>
+              <tr>
+                <td>New Visits</td>
+                <td>{{dataset.current.visits?.new_visit}}</td>
+                <td>{{dataset.getComparedData("visits")?.new_visit}}</td>
+                <td>
+                  <i class="fa {{helper.getSymbol(dataset.current.visits?.new_visit,dataset.getComparedData('visits')?.new_visit)}}"></i>
+                  {{helper.getPositivePercentage(dataset.current.visits?.new_visit,dataset.getComparedData('visits')?.new_visit)}}
+                </td>
+              </tr>
+              <tr>
+                <td>Return Visits</td>
+                <td>{{dataset.current.visits?.return_visit}}</td>
+                <td>{{dataset.getComparedData('visits')?.return_visit}}</td>
+                <td>
+                  <i class="fa {{helper.getSymbol(dataset.current.visits?.return_visit,dataset.getComparedData('visits')?.return_visit)}}"></i>
+                  {{helper.getPositivePercentage(dataset.current.visits?.return_visit,dataset.getComparedData('visits')?.return_visit)}}
+                </td>
+              </tr>
+              <tr>
+                <td>Organic Visits(SEO)</td>
+                <td>{{dataset.current.organic?.values[0].value}}</td>
+                <td>{{dataset.getComparedData('organic')?.values[0].value}}</td>
+                <td>
+                  <i class="fa {{helper.getSymbol(dataset.current.organic?.values[0].value,dataset.getComparedData('organic')?.values[0].value)}}"></i>
+                  {{helper.getPositivePercentage(dataset.current.organic?.values[0].value,dataset.getComparedData('organic')?.values[0].value)}}
+                </td>
+              </tr>
+              <tr>
+                <td>Bounce Rate</td>
+                <td>{{dataset.current?.bounceRate}}</td>
+                <td>{{dataset.getComparedData('bounceRate')}}</td>
+                <td class="bounce_rate">
+                  <i class="fa {{helper.getSymbol(dataset.current?.bounceRate,dataset.getComparedData('bounceRate'))}}"></i>
+                  {{helper.getPositivePercentage(dataset.current?.bounceRate,dataset.getComparedData('bounceRate'))}}
+                </td>
+              </tr>
+              <tr *ngIf="dataset.current?.transactions!==0">
+                <td>Transactions</td>
+                <td>{{dataset.current?.transactions}}</td>
+                <td>{{dataset.getComparedData('transactions')?dataset.getComparedData('transactions'):0}}</td>
+                <td class="bounce_rate">
+                  <i class="fa {{helper.getSymbol(dataset.current?.transactions,dataset.getComparedData('transactions'))}}"></i>
+                  {{helper.getPositivePercentage(dataset.current?.transactions,dataset.getComparedData('transactions'))}}
+                </td>
+              </tr>
+              <tr *ngIf="dataset.current?.revenue!==0||dataset.current?.revenue!==0.0">
+                <td>Revenue</td>
+                <td>{{dataset.current?.revenue}}</td>
+                <td>{{dataset.getComparedData('revenue')?dataset.getComparedData('revenue'):0}}</td>
+                <td class="bounce_rate">
+                  <i class="fa {{helper.getSymbol(dataset.current?.revenue,dataset.getComparedData('revenue'))}}"></i>
+                  {{helper.getPositivePercentage(dataset.current?.revenue,dataset.getComparedData('revenue'))}}
+                </td>
+              </tr>
+              <tr>
+                <td>Enquiry(All Goals)</td>
+                <td>{{dataset.current?.goalCompletion}}</td>
+                <td>{{dataset.getComparedData('goalCompletion')}}</td>
+                <td>
+                  <i class="fa {{helper.getSymbol(dataset.current?.goalCompletion,dataset.getComparedData('goalCompletion'))}}"></i>
+                  {{helper.getPositivePercentage(dataset.current?.goalCompletion,dataset.getComparedData('goalCompletion'))}}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <select #event (change)="siteEventUpdate(event.value)" id="styled-select">
+                    <option *ngFor="let row of this.events; let i=index" class="dropdown-item" value="{{i}}">
+                      {{row.key}}
+                    </option>
+                  </select>
+                </td>
+                <td>{{eventIndex?.currentEvent}}</td>
+                <td>{{eventIndex?.compareEvent}}</td>
+                <td><i class="fa {{eventIndex?.symbol}}"></i>{{eventIndex?.eventCompare}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <inline-editor type="textarea" empty="Comment" [(ngModel)]="dataset.comments.glance" name="editableTextArea"></inline-editor>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+</div>

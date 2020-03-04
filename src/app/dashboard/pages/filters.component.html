@@ -1,0 +1,7 @@
+<div class="filter-data">
+  <select #event (change)="filterEvent(event.value)" id="styled-select" multiple>
+    <option *ngFor="let row of this.events; let i=index" class="dropdown-item" value="{{i}}">
+      {{row.key}}
+    </option>
+  </select>
+</div>
