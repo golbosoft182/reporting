@@ -247,7 +247,7 @@ export class ClientComponent implements OnInit {
               }).map(item=>({"key":val.key,"current":val.value,"compare":item.value}))[0];
       }).filter(item=>{
          if(item){
-           if(item.key!=="Contact Form Button Clicks"||this.client_data["client_name"]!=="Ubiquinol"){
+           if(item.key!=="Contact Form Button Clicks"||this.client_data["client_name"]!=="Ubiquinol"||this.client_data["client_name"]!=="Piksters"){
              return item;
            }
          }
